@@ -41,7 +41,14 @@ print(friends)
 ## Get a user's recent tweets using user_timeline
 christ_tweets = api.user_timeline(screen_name = 'prattprattpratt', count = 5) 
 
+'''
 for tweet in christ_tweets:
-    print(f'{tweet.user.screen_name}: {tweet.text}\n')
+    print(f'{tweet.user.screen_name}: {tweet.text}\n') 
+'''
+
+mytweets = api.home_timeline()
+
+for tweet in mytweets:
+    print(f'{tweet.user.screen_name}: {tweet.text}\n') 
 
 
